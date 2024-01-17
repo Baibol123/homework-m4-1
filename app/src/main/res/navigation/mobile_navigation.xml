@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.homework_m4_1.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="argtext"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_home_to_taskEditFragment"
+            app:destination="@id/taskEditFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="addtask"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.homework_m4_1.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.homework_m4_1.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/taskEditFragment"
+        android:name="com.example.homework_m4_1.ui.home.TaskEditFragment"
+        android:label="fragment_task_edit"
+        tools:layout="@layout/fragment_task_edit" >
+        <argument android:name="argtext"
+            app:argType="string" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_taskEditFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="addtask"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>
