@@ -8,8 +8,7 @@
     android:layout_margin="1dp"
 
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:id="@+id/song_list"
         android:layout_gravity="center"
@@ -21,7 +20,7 @@
         android:background="@drawable/ic_task"
 
 
-         />
+        />
 
 
     <TextView
@@ -35,4 +34,5 @@
         android:textStyle="bold"
         tools:text="Task description"
         tools:ignore="MissingConstraints" />
+
 </LinearLayout>

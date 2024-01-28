@@ -1,4 +1,4 @@
-package com.example.homework_m4_1.ui.notifications
+package com.example.homework_m4_1.ui.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
