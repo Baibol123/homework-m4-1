@@ -104,10 +104,12 @@ class HomeFragment : Fragment() {
 
         existingTaskList.remove(existingTask)
 
-        when (result.argtask.type) {
-            TypeTasks.LIST -> HomeTasks.add(result.argtask)
-            TypeTasks.IN_PROGRESS -> ProgressTasks.add(result.argtask)
-            TypeTasks.COMPLETED -> complitedTasks.add(result.argtask)
+        result.argtask?.let {
+            when (it.type) {
+                TypeTasks.LIST -> HomeTasks.add(it)
+                TypeTasks.IN_PROGRESS -> ProgressTasks.add(it)
+                TypeTasks.COMPLETED -> complitedTasks.add(it)
+            }
         }
     }
 
