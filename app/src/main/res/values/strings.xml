@@ -8,6 +8,7 @@
     <string name="argtext">argtext</string>
     <string name="str_tasks">Tasks</string>
     <string name="str_all_tasks">All</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </string>
 
     <string name="str_progress_tasks">In progress</string>
     <string name="str_completed_tasks">Completed</string>
